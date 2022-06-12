@@ -1,36 +1,75 @@
 {%  extends 'base.html' %}
 
 {% block content %}
-    <p> ** For full credit ** see the Portfolio page with a html table<a></a></p>
+    <p><b>** For full credit **</b> see the Portfolio page with a html table <a href="/portfolioTable">here</a>.</p>
     <div class="container-fluid m-3 border border-dark rounded">
         <h2>Amazon Projects</h2>
         <div class="row">
-            <div class="card m-1" style="width: 24rem;">
-                <img class="card-img-top" src="https://avatars.githubusercontent.com/u/86696725?s=400&u=edef65f13a328b2fc00c65940326866211117e34&v=4" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="col-3">
+                <div class="card shadow">
+                    <img src="https://avatars.githubusercontent.com/u/86696725?s=400&u=edef65f13a328b2fc00c65940326866211117e34&v=4" class="card-img-top" alt="Newton">
+                    <div class="card-body">
+                        <h5 class="card-title">Newton</h5>
+                        <p class="card-text">A labor planning and auditing tool for Ship Docks across the Amazon NAFC ARS Network.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Front End: VBA</li>
+                        <li class="list-group-item">Back End: Python, SQL</li>
+                    </ul>
                 </div>
             </div>
-            <div class="card m-1" style="width: 24rem;">
-                <img class="card-img-top" src="https://avatars.githubusercontent.com/u/86696725?s=400&u=edef65f13a328b2fc00c65940326866211117e34&v=4" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="col-3">
+                <div class="card shadow">
+                    <img src="https://avatars.githubusercontent.com/u/86696725?s=400&u=edef65f13a328b2fc00c65940326866211117e34&v=4" class="card-img-top" alt="WaspDash">
+                    <div class="card-body">
+                        <h5 class="card-title">WaspDash</h5>
+                        <p class="card-text">A dashboard that displays KPIs that allow Waterspiders to respond the andon events promptly.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Front End: React and Bootstrap</li>
+                        <li class="list-group-item">Web Framework: Django</li>
+                        <li class="list-group-item">Back End Infrastructure: API Gateway, Lambda, Redshift, DynamoDB</li>
+                    </ul>
                 </div>
             </div>
         </div>
 
         <h2>UAB Projects</h2>
         <div class="row">
-            <div class="card m-1" style="width: 18rem;">
-                <img class="card-img-top" src="https://avatars.githubusercontent.com/u/86696725?s=400&u=edef65f13a328b2fc00c65940326866211117e34&v=4" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="col-3">
+                <div class="card">
+                    <img src="https://avatars.githubusercontent.com/u/86696725?s=400&u=edef65f13a328b2fc00c65940326866211117e34&v=4" class="card-img-top" alt="Newton">
+                    <div class="card-body">
+                        <h5 class="card-title">Newton</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">An item</li>
+                        <li class="list-group-item">A second item</li>
+                        <li class="list-group-item">A third item</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
                 </div>
             </div>
-            <div class="card m-1" style="width: 18rem;">
-                <img class="card-img-top" src="https://avatars.githubusercontent.com/u/86696725?s=400&u=edef65f13a328b2fc00c65940326866211117e34&v=4" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="col-3">
+                <div class="card">
+                    <img src="https://avatars.githubusercontent.com/u/86696725?s=400&u=edef65f13a328b2fc00c65940326866211117e34&v=4" class="card-img-top" alt="Newton">
+                    <div class="card-body">
+                        <h5 class="card-title">Newton</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">An item</li>
+                        <li class="list-group-item">A second item</li>
+                        <li class="list-group-item">A third item</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
                 </div>
             </div>
         </div>

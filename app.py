@@ -19,6 +19,10 @@ def resume():
 def portfolio():
     return render_template('portfolio.html')
 
+# portfolioTable
+@app.route('/portfolioTable')
+def portfolioTable():
+    return render_template('portfolioTable.html')
 
 @app.route('/contact')
 def contact():
