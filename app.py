@@ -2,7 +2,8 @@ from flask import Flask, render_template, send_from_directory, url_for, redirect
 import os
 
 
-app = Flask(__name__, static_url_path='/static', static_folder='/static')
+app = Flask(__name__)
+# , static_url_path='/static', static_folder='/static'
 
 
 @app.route('/')
@@ -25,10 +26,9 @@ def contact():
     return render_template('contactme.html')
 
 
-@app.route('/favicon.ico')
-def favicon():
-    return send_from_directory(os.path.join(app.root_path, 'static'),
-                               'favicony.ico', mimetype='image/vnd.microsoft.icon')
+@app.route('/static/<path:path>')
+def statics(path):
+    return send_from_directory('static', path)
 
 
 if __name__ == '__main__':
