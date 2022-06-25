@@ -38,6 +38,7 @@ env:
   ECS_SERVICE: mycv-ecs-service
   ECS_CLUSTER: MyCV
   ECS_TASK_DEFINITION: mycv-task-definition
+  CONTAINER_NAME: mycv-ecr
 
 
 jobs:
@@ -79,7 +80,7 @@ jobs:
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
         task-definition: ${{ env.ECS_TASK_DEFINITION }}
-#        container-name: ${{ env.CONTAINER_NAME }}
+        container-name: ${{ env.CONTAINER_NAME }}
         image: ${{ steps.build-image.outputs.image }}
 
     - name: Deploy Amazon ECS task definition
