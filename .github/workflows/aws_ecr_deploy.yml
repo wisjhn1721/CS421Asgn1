@@ -37,7 +37,7 @@ env:
   ECR_REPOSITORY: mycv-ecr
   ECS_SERVICE: mycv-ecs-service
   ECS_CLUSTER: MyCV
-  ECS_TASK_DEFINITION: mycv-task-definition
+  ECS_TASK_DEFINITION: aws-task-definition
   CONTAINER_NAME: mycv-ecr
 
 
