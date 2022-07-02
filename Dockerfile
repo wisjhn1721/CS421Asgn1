@@ -1,54 +1,20 @@
-FROM python:3.7
+# Use the official lightweight Python image.
+# https://hub.docker.com/_/python
+FROM python:3.7-slim
 
-# -- to install python package psycopg2 (for postgres) -- #
-# RUN apt-get update
-# RUN apt-get install -y postgresql libpq-dev postgresql-client postgresql-client-common gcc
+# Allow statements and log messages to immediately appear in the Knative logs
+ENV PYTHONUNBUFFERED True
 
-# add user (change to whatever you want)
-## prevents running sudo commands
-#RUN useradd -r -s /bin/bash john
+# Copy local code to the container image.
+ENV APP_HOME /mycv
+WORKDIR $APP_HOME
+COPY . ./
 
-# set current env
-ENV HOME /app
-WORKDIR /app
-ENV PATH="/app/.local/bin:${PATH}"
-#
-#RUN chown -R john:john /app
-#USER john
-#
-## set app config option
-#ENV FLASK_ENV=production
-
-# set argument vars in docker-run command
-#ARG AWS_ACCESS_KEY_ID
-#ARG AWS_SECRET_ACCESS_KEY
-#ARG AWS_DEFAULT_REGION
-# -- AWS RDS vars -- #
-# ARG POSTGRES_USER
-# ARG POSTGRES_PW
-# ARG POSTGRES_URL
-# ARG POSTGRES_DB
-
-#ENV AWS_ACCESS_KEY_ID $AWS_ACCESS_KEY_ID
-#ENV AWS_SECRET_ACCESS_KEY $AWS_SECRET_ACCESS_KEY
-#ENV AWS_DEFAULT_REGION $AWS_DEFAULT_REGION
-
-# Avoid cache purge by adding requirements first
-#ADD ./requirements.txt ./requirements.txt
-
+# Install production dependencies.
 RUN pip install Flask gunicorn
-##
-##RUN pip install --no-cache-dir -r ./requirements.txt --user
-#
-## Add the rest of the files
-COPY . /app
-WORKDIR /app
-#
-## start web server
-#CMD ["gunicorn", "-b", "0.0.0.0:5000", "app:app", "--workers=5"]
 
-# 4
-ENV PORT 8080
-
-# 5
-CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 app:app
+# Run the web service on container startup. Here we use the gunicorn
+# webserver, with one worker process and 8 threads.
+# For environments with multiple CPU cores, increase the number of workers
+# to be equal to the cores available.
+CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 app:app
