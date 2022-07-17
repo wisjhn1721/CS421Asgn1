@@ -7,6 +7,10 @@
       "**/node_modules/**",
       "venv"
     ],
+    "predeploy": [
+      "gcloud builds submit --tag gcr.io/john-wise/helloworld",
+      "gcloud run deploy --image gcr.io/john-wise/helloworld"
+    ],
     "rewrites": [ {
         "source": "**",
         "run": {

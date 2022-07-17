@@ -2,25 +2,213 @@
 
 {% block content %}
 
-    <img class="img-thumbnail float-left m-2 shadow" src="../static/img/me.jpg" alt="Profile Picture" align="top">
-    <div class="m-4 card-text">
-        <h2>Welcome!</h2><br>
-        <p>Hello and welcome! This is a site built for CS 421 Advance Web Development. Click on any links in the navbar in order to navigate the page.</p>
+    <div class="main-container">
+        <div class="left-column">
+            <p></p>
+        </div>
+        <div class="row">
+            <!-- Main Content -->
+            <div class="main-content">
+                <div class="col-4">
+                    <div class="main-img-container">
+                        <img class="main-img" src="../static/img/me.jpg" alt="Profile Picture" align="top">
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="main-name-container">
+                        <h2 class="name">John Wise</h2><br>
+                        <h2 class="title">
+                            <span id="typing-title"></span>
+                            <span class="input-cursor"></span>
+                        </h2>
+                        <p> Hi, I'm John. I am a Computer Science undergraduate student at UAB in Birmingham, AL.
+                            I currently work at Amazon as a Business Analyst. I enjoy problem solving, software development, and audio signal processing.</p>
+                        <div class="social-links">
+                            <!--  LinkedIn Logo  -->
+                            <div class="social-logo-frame">
+                                <a href="https://www.linkedin.com/in/john-wise-6a9ba3218/">
+                                    <img class="social-logo" src="../static/img/social-logos/linkedin.png" alt="LinkedIn">
+                                </a>
+                            </div>
+                            |
+                            <!--  Github Logo  -->
+                            <div class="social-logo-frame">
+                                <a href="https://github.com/wisjhn1721">
+                                    <img class="social-logo" src="../static/img/social-logos/github.png" alt="Github">
+                                </a>
+                            </div>
+                            |
+                            <!--  Email Logo  -->
+                            <div class="social-logo-frame">
+                                <a href="mailto:jdwise@uab.edu">
+                                    <img class="social-logo" src="../static/img/social-logos/email.png" alt="Email">
+                                </a>
+                            </div>
+                            |
+                            <!--  Blogging Logo  -->
+                            <div class="social-logo-frame">
+                                <a href="#">
+                                    <img class="social-logo" src="../static/img/social-logos/blogging.png" alt="Blog">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--  Projects -->
+            <div class="project-content">
+                <div class="project-title-bar">
+                    <h2 class="project-header">Projects</h2>
+                </div>
+                <div class="project-cardlist-container">
+                    <h2>Personal Projects</h2>
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="card shadow">
+                                <img src="../static/img/PA.png" class="card-img-top border-bottom" alt="PA">
+                                <div class="card-body">
+                                    <h5 class="card-title">Perfect Attendance</h5>
+                                    <p class="card-text">An attendance automation and tracking tool which is paired with Canvas to auto-grade course attendance.</p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><u>Front End:</u> Javascript, Bootstrap 4, HTML, CSS</li>
+                                    <li class="list-group-item"><u>Web Framework:</u> Django</li>
+                                    <li class="list-group-item"><u>Back End Infrastructure:</u> API Gateway, Lambda, DynamoDB</li>
+                                    <li class="list-group-item"><u>Github:</u> <a href="https://github.com/wisjhn1721/PerfAtten" class="card-link">PA Repo</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card shadow">
+                                <img src="../static/img/lfo_dsp.png" class="card-img-top border-bottom" alt="LFO">
+                                <div class="card-body">
+                                    <h5 class="card-title">Audio DSP</h5>
+                                    <p class="card-text">Using digital audio processing to develop new audio effects plug-ins.</p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><u>Language:</u> C++</li>
+                                    <li class="list-group-item"><u>Software Wrapper:</u> RackAFX</li>
+                                    <li class="list-group-item"><u>Plug-in Types:</u> VST3, AAX, and AU (OSX or iOS)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Work Projects</h2>
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="card shadow">
+                                <img src="../static/img/image(2).png" class="card-img-top border-bottom" alt="Newton">
+                                <div class="card-body">
+                                    <h5 class="card-title">Newton</h5>
+                                    <p class="card-text">A labor planning and auditing tool for Ship Docks across the Amazon NAFC ARS Network.</p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><u>Front End:</u> VBA</li>
+                                    <li class="list-group-item"><u>Back End:</u> Python, SQL</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card shadow">
+                                <img src="../static/img/WaspDash_V2_Graphical.jpg" class="card-img-top border-bottom" alt="WaspDash">
+                                <div class="card-body">
+                                    <h5 class="card-title">WaspDash</h5>
+                                    <p class="card-text">A dashboard that displays KPIs that allow Waterspiders to respond the andon events promptly.</p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><u>Front End:</u> React and Bootstrap</li>
+                                    <li class="list-group-item"><u>Web Framework:</u> Django</li>
+                                    <li class="list-group-item"><u>Back End Infrastructure:</u> API Gateway, Lambda, Redshift, DynamoDB</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--  Skills  -->
+            <div class="skills-content">
+                <div class="skills-title-bar">
+                    <h2 class="skills-header">Skills</h2>
+                </div>
+                <div class="skills-cardlist-container">
+                    <div class="row">
+                        <div class="skill-section">
+                            <div class="skill-section-title">
+                                Web Development
+                            </div>
+                            <ul>
+                                <li>HTML, CSS, JS</li>
+                                <li>Django</li>
+                                <li>React</li>
+                            </ul>
+                        </div>
+                        <div class="col-3">
+                            <div class="skill-section-title">
+                                Coding
+                            </div>
+                            <ul>
+                                <li><b>Languages:</b> Python, Java, C++, JavaScript</li>
+                                <li><b>Machine Learning:</b> SciKit, Deep Learning, Keras</li>
+                                <li><b>Containerization: </b> Docker</li>
+                            </ul>
+
+                        </div>
+                        <div class="col-3">
+                            <div class="skill-section-title">
+                                AWS Cloud Infrastructure
+                            </div>
+                            <ul>
+                                <li><b>Compute: </b>Lambda, EC2</li>
+                                <li><b>Storage: </b>Redshift, DynamoDB, RDS, S3</li>
+                                <li><b>Data Streams: </b>DynamoDB Streams, Kinesis Firehose</li>
+                                <li><b>Deployment: </b>ECS, Fargate, Docker</li>
+                            </ul>
+
+                        </div>
+                        <div class="col-3">
+                            <div class="skill-section-title">
+                                Audio Signal Processing
+                            </div>
+                            <ul>
+                                <li>RackFX</li>
+                                <li>JUCE</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-column">
+            <p></p>
+        </div>
+
+
+
     </div>
+
+
 
 {% endblock content %}
 
-{% block sidebar %}
-    <div class="content-section">
-        <h3>Welcome!</h3>
-        <p class='text-muted'>Check out my social media:</p>
-        <ul class="list-group">
-            <li class="list-group-item list-group-item-light">
-                <a href="https://github.com/wisjhn1721">Github</a>
-            </li>
-            <li class="list-group-item list-group-item-light">
-                <a href="https://www.linkedin.com/in/john-wise-6a9ba3218/">LinkedIn</a>
-            </li>
-        </ul>
-    </div>
-{% endblock sidebar %}
+{#{% block sidebar %}#}
+{#    <div class="content-section">#}
+{#        <h3>Welcome!</h3>#}
+{#        <p class='text-muted'>Check out my social media:</p>#}
+{#        <ul class="list-group">#}
+{#            <li class="list-group-item list-group-item-light">#}
+{#                <a href="https://github.com/wisjhn1721">Github</a>#}
+{#            </li>#}
+{#            <li class="list-group-item list-group-item-light">#}
+{#                <a href="https://www.linkedin.com/in/john-wise-6a9ba3218/">LinkedIn</a>#}
+{#            </li>#}
+{#            <li class="list-group-item list-group-item-light">#}
+{#                <a href="mailto:jdwise@uab.edu">Email</a>#}
+{#            </li>#}
+{#        </ul>#}
+{#    </div>#}
+{#{% endblock sidebar %}#}

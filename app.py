@@ -7,23 +7,23 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def hello():
+def home():
     return render_template('home.html')
 
-
-@app.route('/resume')
-def resume():
-    return render_template('resume.html')
-
-
-@app.route('/portfolio')
-def portfolio():
-    return render_template('portfolio.html')
-
-
-@app.route('/contact')
-def contact():
-    return render_template('contactme.html')
+#
+# @app.route('/resume')
+# def resume():
+#     return render_template('resume.html')
+#
+#
+# @app.route('/portfolio')
+# def portfolio():
+#     return render_template('portfolio.html')
+#
+#
+# @app.route('/contact')
+# def contact():
+#     return render_template('contactme.html')
 
 
 @app.route('/static/<path:path>')

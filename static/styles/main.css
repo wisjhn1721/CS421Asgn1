@@ -1,0 +1,220 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    /*background: #343a40;*/
+    background: #DCD7C9;
+    /*color: #cccccc;*/
+}
+.main-container {
+    display: flex;
+    flex-direction: row;
+    min-width: 100%;
+    height: auto;
+}
+.main-content {
+    /*background: rgba(52, 58, 64, 0.05);*/
+    height: 70vh;
+    min-height: 550px;
+    width:100%;
+    min-width: 80vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.main-img-container {
+    display: grid;
+    min-width: 100%;
+    min-height: 100%;
+    align-content: center;
+}
+
+.main-img {
+    width: 270px;
+    height: 270px;
+    border-radius: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.main-name-container {
+    display: grid;
+    min-width: 100%;
+    min-height: 100%;
+    align-content: center;
+}
+
+.main-name-container > p {
+    max-width: 75%;
+    font-size: medium;
+    font-family: Arial, serif;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+}
+
+.social-logo-frame {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.social-logo {
+    max-width: 40px;
+    max-height: 40px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.name {
+    font-size: xxx-large;
+    font-family: 'Righteous', cursive;
+}
+
+.title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.input-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 42px;
+    background-color: white;
+    margin-left: 8px;
+    animation: blink .6s linear infinite alternate;
+}
+
+@keyframes blink {
+    0% {opacity: 1;}
+    40% {opacity: 1;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}
+  }
+
+.project-content {
+    height: auto;
+    min-height: 400px;
+    width:100%;
+    min-width: 80vw;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.project-title-bar {
+    display: flex;
+    height: 25%;
+    min-height: 100px;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-header {
+    font-size: xxx-large;
+    font-family: 'Righteous', cursive;
+}
+
+.project-cardlist-container {
+    background: white;
+    width: 100%;
+    height: 100%;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 60px;
+    border: #888888 2px;
+    border-radius: 10px;
+    max-width: 70vw;
+
+}
+
+
+.skills-content {
+    height: auto;
+    min-height: 400px;
+    width:100%;
+    min-width: 80vw;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.skills-title-bar {
+    display: flex;
+    height: 25%;
+    min-height: 100px;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skills-header {
+    font-size: xxx-large;
+    font-family: 'Righteous', cursive;
+}
+
+.skills-cardlist-container {
+    background: white;
+    width: 100%;
+    height: 100%;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 60px;
+    border: #888888 2px;
+    border-radius: 10px;
+    max-width: 70vw;
+
+}
+
+.skill-section {
+    border: #888888;
+    border-radius: 3px;
+    min-height: 100%;
+    min-width: 25%;
+}
+
+.skill-section-title {
+    font-size: large;
+    font-family: 'Righteous', serif;
+    text-align: center;
+}
+
+.left-column {
+    /*background: darkred;*/
+    min-width: 10vw;
+    background-image: url("/static/img/record-spines.jpg");
+    background-size: 100% 100%;
+    background-repeat: repeat-y;
+    background-color: #343a40;
+    background-blend-mode: multiply;
+}
+
+.right-column {
+    /*background: olive;*/
+    min-width: 10vw;
+    background-image: url("/static/img/record-spines.jpg");
+    background-size: 100% 100%;
+    background-repeat: repeat-y;
+    background-color: #343a40;
+    background-blend-mode: multiply;
+}
+
+.nav-link-right {
+    float: right;
+}
+
